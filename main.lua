@@ -1579,7 +1579,7 @@ antiaimbox:AddSlider("spinBotSpeed", {
     Text = "SpinBot Speed",
     Default = 10,
     Min = 0,
-    Max = 1000,
+    Max = 10000,
     Rounding = 1,
     Tooltip = "The speed at which the character spins (RPM).",
     Callback = function(rpmSpeedValue)
