@@ -1000,37 +1000,6 @@ do
         return self;
     end;
 
-local UserInputService = game:GetService("UserInputService")
-local connection
-
-KeyPickerButton.MouseButton1Click:Connect(function()
-    if KeyPicker.Toggled then return end
-    KeyPicker.Toggled = true
-    KeyPickerDisplayLabel.Text = "Press a key..."
-
-    connection = UserInputService.InputBegan:Connect(function(input, processed)
-        if processed then return end
-        if input.UserInputType == Enum.UserInputType.Keyboard then
-            local keyName = input.KeyCode.Name
-            if keyName == "Escape" then
-                KeyPicker.Value = "NONE"
-            else
-                KeyPicker.Value = keyName
-            end
-
-            KeyPickerDisplayLabel.Text = KeyPicker.Value
-            KeyPicker.Callback(KeyPicker.Value)
-            KeyPicker.ChangedCallback(KeyPicker.Value)
-
-            KeyPicker.Toggled = false
-            if connection then
-                connection:Disconnect()
-                connection = nil
-            end
-        end
-    end)
-end)
-
     function Funcs:AddKeyPicker(Idx, Info)
         local ParentObj = self;
         local ToggleLabel = self.TextLabel;
