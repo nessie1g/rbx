@@ -3609,7 +3609,7 @@ function Library:CreateWindow(...)
                 return
             end
         end
-        if Input.KeyCode == Enum.KeyCode.RightControl or (Input.KeyCode == Enum.KeyCode.RightShift and (not Processed)) then
+        if Input.KeyCode == Enum.KeyCode.RightControl or (Input.KeyCode == Enum.KeyCode.Delete and (not Processed)) then
             task.spawn(Library.Toggle)
         end
     end))
