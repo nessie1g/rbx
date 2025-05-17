@@ -74,7 +74,7 @@ end
 local SilentAimSettings = {
     Enabled = false,
     
-    ClassName = "PasteWare  |  github.com/FakeAngles",
+    ClassName = "t-s-u  |  dsc.gg/t-s-u",
     ToggleKey = "U",
     
     TeamCheck = false,
@@ -320,7 +320,7 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/F
 Library.KeybindFrame.Visible = true;
 
 local Window = Library:CreateWindow({
-    Title = 'PasteWare  |  github.com/FakeAngles',
+    Title = 't-s-u  | dsc.gg/t-s-u',
     Center = true,
     AutoShow = true,  
     TabPadding = 8,
