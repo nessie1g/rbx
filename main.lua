@@ -1462,12 +1462,13 @@ frabox:AddSlider("Speedhack", {
     Text = "CFrame Multiplier",
     Default = 1,
     Min = 0,
-    Max = 2,
-    Rounding = 0.1,
+    Max = 10,
+    Rounding = 1,
     Tooltip = "The CFrame speed.",
     Callback = function(value)
-        Cmultiplier = value
-    end,
+        local snappedValue = math.floor(value * 10 + 0.5) / 10
+        Cmultiplier = snappedValue
+    end
 })
 
 fraboxr:AddToggle("Fly", {
